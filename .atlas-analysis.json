@@ -1,0 +1,184 @@
+{
+  "projectType": "api-service",
+  "projectName": "DaliLM Backend API",
+  "projectDescription": "FastAPI-based backend service for lead management, commission calculation, client relationship management, and multi-channel communications.",
+  "theme": "sequoia",
+  "primaryColor": "#2563eb",
+  "lightColor": "#3b82f6",
+  "darkColor": "#1e40af",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "authentication"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/architecture",
+              "concepts/data-model",
+              "concepts/error-handling",
+              "concepts/rate-limits"
+            ]
+          },
+          {
+            "group": "Deployment",
+            "pages": [
+              "deployment/docker",
+              "deployment/environment-variables",
+              "deployment/database-setup"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Authentication",
+            "pages": [
+              "api-reference/auth/overview",
+              "api-reference/auth/sessions"
+            ]
+          },
+          {
+            "group": "Leads",
+            "pages": [
+              "api-reference/leads/create-lead",
+              "api-reference/leads/list-leads",
+              "api-reference/leads/update-lead",
+              "api-reference/leads/delete-lead",
+              "api-reference/leads/assign-lead",
+              "api-reference/leads/bulk-operations",
+              "api-reference/leads/export-leads"
+            ]
+          },
+          {
+            "group": "Lead Assignments",
+            "pages": [
+              "api-reference/lead-assignments/reassignment",
+              "api-reference/lead-assignments/assignment-history",
+              "api-reference/lead-assignments/orphaned-leads"
+            ]
+          },
+          {
+            "group": "Interactions",
+            "pages": [
+              "api-reference/interactions/create-interaction",
+              "api-reference/interactions/list-interactions",
+              "api-reference/interactions/update-interaction",
+              "api-reference/interactions/delete-interaction",
+              "api-reference/interactions/client-history"
+            ]
+          },
+          {
+            "group": "Commissions",
+            "pages": [
+              "api-reference/commissions/overview",
+              "api-reference/commissions/commission-plans",
+              "api-reference/commissions/commission-rules",
+              "api-reference/commissions/catalogs",
+              "api-reference/commissions/earned-commissions"
+            ]
+          },
+          {
+            "group": "Clients",
+            "pages": [
+              "api-reference/clients/cartera",
+              "api-reference/clients/client-status",
+              "api-reference/clients/client-interactions"
+            ]
+          },
+          {
+            "group": "Communications",
+            "pages": [
+              "api-reference/communications/send-email",
+              "api-reference/communications/email-templates",
+              "api-reference/communications/email-signatures",
+              "api-reference/communications/whatsapp-messages",
+              "api-reference/communications/whatsapp-accounts"
+            ]
+          },
+          {
+            "group": "Reports",
+            "pages": [
+              "api-reference/reports/workspaces",
+              "api-reference/reports/reports",
+              "api-reference/reports/access-control",
+              "api-reference/reports/favorites"
+            ]
+          },
+          {
+            "group": "Users & Profile",
+            "pages": [
+              "api-reference/users/users",
+              "api-reference/users/profile",
+              "api-reference/users/notifications",
+              "api-reference/users/preferences"
+            ]
+          },
+          {
+            "group": "Corporate Leads",
+            "pages": [
+              "api-reference/corporate-leads/create-lead",
+              "api-reference/corporate-leads/update-lead",
+              "api-reference/corporate-leads/assign-lead",
+              "api-reference/corporate-leads/validate-document"
+            ]
+          },
+          {
+            "group": "Integrations",
+            "pages": [
+              "api-reference/integrations/powerbi",
+              "api-reference/integrations/graph-oauth",
+              "api-reference/integrations/profiling"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Lead and opportunity management with assignment workflows",
+    "Commission calculation engine with rule-based plans",
+    "Multi-channel communications (Email, WhatsApp)",
+    "Client portfolio management (cartera)",
+    "Power BI reporting and analytics integration",
+    "Azure AD authentication and role-based access control",
+    "Corporate and retail lead separation",
+    "Interaction tracking and client history"
+  ],
+  "publicApiSurface": [
+    "POST /api/leads - Create a new lead",
+    "GET /api/leads - List leads with filtering",
+    "PUT /api/leads/{id} - Update lead details",
+    "DELETE /api/leads/{id} - Delete a lead",
+    "POST /api/leads/assign - Assign lead to user",
+    "GET /api/commission-plans - List commission plans",
+    "POST /api/commission-plans - Create commission plan",
+    "PUT /api/commission-plans/{id} - Update commission plan",
+    "POST /api/commission-plans/{id}/approve - Approve commission plan",
+    "POST /api/commission-rules - Create commission rule",
+    "GET /api/interactions - List interactions",
+    "POST /api/interactions - Create interaction",
+    "GET /api/interactions/{lead_id} - Get interactions by lead",
+    "POST /api/emails/send - Send email",
+    "GET /api/emails/templates - List email templates",
+    "POST /api/whatsapp/send - Send WhatsApp message",
+    "GET /api/whatsapp/accounts - List WhatsApp accounts",
+    "GET /api/cartera/grid - Get client portfolio grid",
+    "POST /api/cartera/reveal - Reveal client contact info",
+    "GET /api/reports - List available reports",
+    "GET /api/users - List users",
+    "GET /api/profile - Get user profile",
+    "PUT /api/profile/basic - Update basic profile",
+    "GET /api/sessions - Get active sessions"
+  ]
+}
